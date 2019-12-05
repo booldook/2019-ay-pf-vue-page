@@ -1,0 +1,6 @@
+html, body {margin: 0; padding: 0; box-sizing: border-box; font-size: 16px;}
+div, ul, li, ol, dl, dd, dt {list-style: none; margin: 0; padding: 0; box-sizing: inherit;}
+
+.clear::after {content: ""; clear: both; display: block;}
+.img {width: 100%;}
+.img2 {max-width: 100%;}
