@@ -15,10 +15,17 @@
 		<div class="jumbotron">
 			<h1>Vue를 배워봅시다.</h1>
 		</div>
-		<form class="position-relative">
+		<form v-on:submit.prevent="onSubmit" class="position-relative">
 			<input v-model="query" type="text" autofocus class="form-control">
 			<i v-show="query.length" v-on:click="onReset" class="btn-reset fas fa-times-circle"></i>
 		</form>
+		<div class="d-flex justify-content-between flex-wrap my-3">
+			<ul class="mb-4" style="flex: 32% 0 0;" v-for="item in resultData">
+				<li><img v-bind:src="item.src" class="w-100"></li>
+				<li><h3>{{ item.title }}</h3></li>
+				<li>{{ item.desc }}</li>
+			</ul>
+		</div>
 	</div>
 	<script src="https://unpkg.com/vue"></script>
 	<script src="../js/index.js" type="module"></script>

@@ -23,4 +23,14 @@ const data = [
 		desc: 'Lorem ipsum text praesent tincidunt ipsum lipsum.', 
 		src: '../img/wine.jpg'
 	},
-],
+]
+
+export default {
+	name: "PrdModel",
+	list() {
+		return data;
+	},
+	remove() {
+
+	}
+}
