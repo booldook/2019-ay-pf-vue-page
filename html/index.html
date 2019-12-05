@@ -8,18 +8,17 @@
 	<link rel="stylesheet" href="../css/fa.min.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
 	<div id="app" class="container">
 		<div class="jumbotron">
 			<h1>Vue를 배워봅시다.</h1>
 		</div>
-		<form>
-			<input type="text" autofocus>
+		<form class="position-relative">
+			<input v-model="query" type="text" autofocus class="form-control">
+			<i v-show="query.length" v-on:click="onReset" class="btn-reset fas fa-times-circle"></i>
 		</form>
-		<div>
-
-		</div>
 	</div>
 	<script src="https://unpkg.com/vue"></script>
 	<script src="../js/index.js" type="module"></script>
